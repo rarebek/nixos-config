@@ -14,6 +14,7 @@
     neofetch
     firefox
     openssh
+    spotify
   ];
 
   programs.zsh = {
