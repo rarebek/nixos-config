@@ -48,6 +48,18 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable zsh
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      c = "clear";
+      l = "ls -lh";
+      gs = "git status";
+      s = "sudo nixos-rebuild switch --flake ~/nixos-config#therare";
+    };
+  };
+
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -71,6 +83,7 @@
   users.users.therare = {
     isNormalUser = true;
     description = "therare";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
