@@ -5,7 +5,6 @@
   home.homeDirectory = "/home/therare";
   home.stateVersion = "25.05";
 
-  programs.zsh.enable = true;
   programs.btop.enable = true;
   programs.neovim.enable = true;
 
@@ -16,6 +15,16 @@
     firefox
     openssh
   ];
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      c = "clear";
+      l = "ls -lh";
+      gs = "git status";
+      s = "sudo nixos-rebuild switch --flake ~/nixos-config#therare";
+    };
+  };
 
   programs.git = {
     enable = true;
