@@ -49,6 +49,17 @@
     addKeysToAgent = "yes";
   };
 
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    profiles.default.extensions = with pkgs.vscode-extensions; [
+      golang.go
+      ms-python.python
+      esbenp.prettier-vscode
+      bbenoist.nix
+    ];
+  };
+
   services.ssh-agent.enable = true;
 
   home.activation.generateSshKey = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
