@@ -60,6 +60,8 @@
     ];
   };
 
+  xdg.configFile."Code/User/settings.json".source = ./vscode/settings.json;
+
   services.ssh-agent.enable = true;
 
   home.activation.generateSshKey = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
@@ -73,7 +75,6 @@
       echo "[=] SSH key already exists, skipping generation"
     fi
   '';
-
 
   dconf.settings."org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
 }

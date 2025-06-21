@@ -21,6 +21,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.therare = import ./home/therare.nix;
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
