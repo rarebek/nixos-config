@@ -73,7 +73,7 @@
       ${pkgs.openssh}/bin/ssh-keygen -t ed25519 -f "$keyfile" -N "" -C "nomonovn2@google.com"
     else
       echo "[=] SSH key already exists, skipping generation"
-    fie
+    fi
   '';
 
   dconf.settings = {
