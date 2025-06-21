@@ -57,9 +57,6 @@
       ms-python.python
       esbenp.prettier-vscode
       bbenoist.nix
-      josemurilloc.aura-spirit-dracula
-      pkief.material-icon-theme
-      subframe7536.custom-ui-style
     ];
   };
 
@@ -76,8 +73,16 @@
       ${pkgs.openssh}/bin/ssh-keygen -t ed25519 -f "$keyfile" -N "" -C "nomonovn2@google.com"
     else
       echo "[=] SSH key already exists, skipping generation"
-    fi
+    fie
   '';
 
-  dconf.settings."org/gnome/desktop/wm/preferences".button-layout = ":minimize,maximize,close";
-}
+  dconf.settings = {
+    "org/gnome/desktop/background" = {
+      picture-uri = "file://${./../wallpapers/go-background.png}";
+      picture-uri-dark = "file://${./../wallpapers/go-background.png}";
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":minimize,maximize,close";
+    };
+  };}
