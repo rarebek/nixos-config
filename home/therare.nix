@@ -57,6 +57,9 @@
       ms-python.python
       esbenp.prettier-vscode
       bbenoist.nix
+      josemurilloc.aura-spirit-dracula
+      pkief.material-icon-theme
+      subframe7536.custom-ui-style
     ];
   };
 

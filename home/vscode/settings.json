@@ -53,7 +53,7 @@
   "custom-ui-style.font.sansSerif": "Dank Mono",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.cursorBlinking": "solid",
-  "editor.cursorStyle": "block",
+  "editor.cursorStyle": "line",
   "workbench.colorCustomizations": {
     "editorCursor.background": "#000000",
     "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
@@ -77,7 +77,7 @@
   "editor.fontFamily": "Dank Mono",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.lineHeight": 1,
+  "editor.lineHeight": 1.5,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
